@@ -1,3 +1,12 @@
+```{toctree}
+:hidden: true
+:maxdepth: 4
+:glob:
+
+index
+GETTING_STARTED
+```
+
 # MemberMatters
 MemberMatters is an open source membership and access management solution.
 
@@ -18,8 +27,8 @@ The following features have now been deprecated and will be removed in a future 
 * Xero integration
 
 ## Getting Started
-See the [getting started](/docs/GETTING_STARTED.md) instructions for how to run the MemberMatters software for your 
-organisation. Once you've finished installing MemberMatters, your should read the [post installation steps](/docs/POST_INSTALL_STEPS.md) for important instructions on setting up and customising your instance.
+See the [getting started](GETTING_STARTED.md) instructions for how to run the MemberMatters software for your
+organisation. Once you've finished installing MemberMatters, your should read the [post installation steps](POST_INSTALL_STEPS.md) for important instructions on setting up and customising your instance.
 
 ### Compatibility
 Currently, MemberMatters is only officially supported on the latest LTS release of Ubuntu Server. Being Docker, you should be able to run it on various other platforms, but minimal support will be available. We currently offer AMD64, ARM64 and ARMv7 builds on Dockerhub.
@@ -29,22 +38,22 @@ The official changelog is available on the website [here](https://membermatters.
 
 ## Getting Started (Developers)
 ### Pre-Commit Hooks
-We use husky and lint-staged to manage pre commit hooks. The first thing you should do is run `npm install` in this 
+We use husky and lint-staged to manage pre commit hooks. The first thing you should do is run `npm install` in this
 directory. This installs and configures the pre commit hooks automatically. After doing this, you should see them run
 when you try to commit a file (for example, with `git commit -m "update thing"`).
 
-### Vue.js JavaScript frontend 
-Please see the [readme](frontend/README.md) file inside the `frontend` folder. This folder contains all of the source
+### Vue.js JavaScript frontend
+Please see the [readme](../frontend/README.md) file inside the `frontend` folder. This folder contains all of the source
 code and other assets needed by the frontend.
 
 ### Django Python backend
-Please see the [readme](memberportal/README.md) file inside the `memberportal` folder. This folder contains all of the source
+Please see the [readme](../memberportal/README.md) file inside the `memberportal` folder. This folder contains all of the source
 code and other assets needed by the backend.
 
 ### Development tip (dev server proxy)
 The Vue.js (Quasar) frontend and Django backend run different dev servers on different ports. Due to
-this you will run into issues with sharing cookies etc across the different URIs. To get around 
-this, the webpack dev server has been setup to proxy all requests to `/api` to `localhost:8000` so 
+this you will run into issues with sharing cookies etc across the different URIs. To get around
+this, the webpack dev server has been setup to proxy all requests to `/api` to `localhost:8000` so
 you'll need to make sure the django dev server is running there.
 
 ## Door, Interlock & Vending Machine Resources
@@ -54,24 +63,24 @@ This software was developed out of HSBNE Inc (Australia's largest makerspace!). 
 * [HSBNE Access Control Firmware](https://github.com/HSBNE/AccessControl) - Arduino based software that runs on ESPxx devices that run each of our interlock/door controllers.
 * [HSBNE Access Control Hardware BOM](https://docs.google.com/spreadsheets/d/1sQvaxc8gp7CUdddq65luUwCwQNSQK4HCsXnodN-CSEk/edit#gid=0) - A list of materials that go into our access control system hardware.
 * [Vending Machine RFID Panel Firmware](https://github.com/HSBNE/VendingMachine) - Arduino based software that powers our Spacebucks (memberbucks) enabled vending machines.
- 
+
 ## Screenshots
 ### Mobile
-<img src="screenshots/m1.png" width="200"> <img src="screenshots/m2.png" width="200"> <img src="screenshots/m3.png" width="200"> <img src="screenshots/m4.png" width="200"> <img src="screenshots/m5.png" width="200">
+<img src="_static/screenshots/m1.png" width="200"> <img src="_static/screenshots/m2.png" width="200"> <img src="_static/screenshots/m3.png" width="200"> <img src="_static/screenshots/m4.png" width="200"> <img src="_static/screenshots/m5.png" width="200">
 
 ### Desktop
-<img src="screenshots/1.png" width="500"> <img src="screenshots/2.png" width="500"> <img src="screenshots/3.png" width="500"> <img src="screenshots/4.png" width="500"> <img src="screenshots/5.png" width="500">
+<img src="_static/screenshots/1.png" width="500"> <img src="_static/screenshots/2.png" width="500">
 
 ### Desktop (Dark Mode)
-<img src="screenshots/d1.png" width="500"> <img src="screenshots/d2.png" width="500"> <img src="screenshots/d3.png" width="500">
+<img src="_static/screenshots/d1.png" width="500">
 
-See the [screenshots](screenshots) folder for more screenshots.
+See the [screenshots](../screenshots) folder for more screenshots.
 
 ## Contributing guidelines
 By contributing code, or any other resource to this repository, you agree to license it
-under the open source MIT license. Please use good coding practices, comment 
-your code well and ensure compliance with any code formatting or linting that's in place. Also 
-avoid "weird tricks" and optimisations that don't read easily - this is a web app, not a high 
+under the open source MIT license. Please use good coding practices, comment
+your code well and ensure compliance with any code formatting or linting that's in place. Also
+avoid "weird tricks" and optimisations that don't read easily - this is a web app, not a high
 performance algorithm.
 
 ## Organisations using MemberMatters
