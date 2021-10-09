@@ -36,6 +36,11 @@ urlpatterns = [
         name="MemberBillingInfo",
     ),
     path(
+        "members/<int:member_id>/logs/",
+        views.MemberLogs.as_view(),
+        name="MemberLogs",
+    ),
+    path(
         "members/<int:member_id>/invoice/<str:send_email>/",
         views.MemberCreateNewInvoice.as_view(),
         name="MemberCreateNewInvoice",

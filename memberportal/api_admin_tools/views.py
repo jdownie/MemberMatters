@@ -1,4 +1,4 @@
-from profile.models import User
+from profile.models import User, UserEventLog
 from access import models
 from .models import MemberTier, PaymentPlan
 from memberbucks.models import MemberBucks
@@ -611,3 +611,17 @@ class MemberBillingInfo(APIView):
         }
 
         return Response(billing_info)
+
+
+class MemberLogs(APIView):
+    """
+    get: This method gets a member's log data.
+    """
+
+    permission_classes = (permissions.IsAdminUser,)
+
+    def get(self, request, member_id):
+        # retrieve up to 1,000 log objects
+        logs = UserEventLog.objects.filter(user_id=member_id)[:1000]
+
+        return Response(logs)
