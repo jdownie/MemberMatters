@@ -12,7 +12,7 @@
         <q-tab name="profile" :label="$t('menuLink.profile')" />
         <q-tab name="access" :label="$t('adminTools.access')" />
         <q-tab name="billing" :label="$t('adminTools.billing')" />
-        <q-tab name="log" disable :label="$t('adminTools.log')" />
+        <q-tab name="log" :label="$t('adminTools.log')" />
         <!--        <q-tab-->
         <!--          name="memberbucks"-->
         <!--          disable-->
@@ -364,7 +364,7 @@
           <access-list :member-id="selectedMemberFiltered.id" />
         </q-tab-panel>
 
-        <q-tab-panel name="log"> Coming Soon! </q-tab-panel>
+        <q-tab-panel name="log"> </q-tab-panel>
 
         <q-tab-panel name="billing">
           <div class="text-h6">
