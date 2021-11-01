@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  mm:
+    image: membermatters/membermatters
+    hostname: mm
+    container_name: mm
+    env_file:
+      - ../MemberMatters.cf/env
+    ports:
+      - 8000:8000
+    volumes:
+      - ../MemberMatters.cf/:/usr/src/data/
